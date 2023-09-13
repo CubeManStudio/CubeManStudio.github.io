@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            方块人CubeMan的博客
+        </title>
+        <style>
+            /*规则(@XXX)*/
+            @keyframes emerge {
+                0% {
+                    opacity: 0;
+                    transform: translateY(+30px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            /*标签*/
+            body {
+                margin: 0;
+            }
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            /*id(#XXX)*/
+            #list {
+                box-shadow: 0px 2px 4px rgb(210, 210, 210);
+                position: fixed;
+                margin: 0;
+                height: 64px;
+                overflow: hidden;
+                position: sticky;
+            }
+            #list li{
+                display: inline;
+                font-size: 20px;
+                float: left;
+                height: 64px;
+            }
+            #list a {
+                text-decoration: none;
+                display: block;
+                color: rgb(30, 30, 30);
+                padding: 20px;
+            }
+            #list a:hover {
+                background-color: rgb(195, 195, 195);
+            }
+            #blog {
+                margin: 32px 64px;
+                animation: emerge 1s ease-in-out;
+            }
+            #blog div {
+                margin: 32px 0;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: row-reverse;
+            }
+            #blog div a div:hover {
+                background-color: rgb(200, 200, 200);
+            }
+            #blog div a div {
+                border-radius: 32px;
+                height: 20dvh;
+                width: 20dvw;
+                background-color: rgb(220, 220, 220);
+            }
+            /*class(.XXX)*/
+            .active {
+                background-color: rgb(220, 220, 220);
+            }
+            .first {
+                text-indent: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="list">
+            <li>
+                <img src="./images/CM_logo.svg" alt="logo" style="padding-top: 12px; padding-right: 12px;">
+            </li>
+            <li style="padding: 20px;">
+                方块人CubeMan的博客
+            </li>
+            <li>
+                <a href="./index.html">
+                    首页
+                </a>
+            </li>
+            <li class="active">
+                <a href="./blogs.html">
+                    博客
+                </a>
+            </li>
+            <li style="float: right;">
+                <a href="./about.html">
+                    关于
+                </a>
+            </li>
+        </ul>
+        <div style="margin: 16px 64px;">
+            <h1>
+                所有文章
+            </h1>
+            <p class="first">
+                一些文章。
+            </p>
+        </div>
+        <div id="blog">
+            <h1>
+                2023年9月
+            </h1>
+            <div id="blog-2023-sep">
+                <a href="./blogs/blog_2023-9-5_firstblog/firstblog.html">
+                    <div>
+                        <h1>
+                            第一篇文章
+                        </h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <script>
+            
+        </script>
+    </body>
+</html>
